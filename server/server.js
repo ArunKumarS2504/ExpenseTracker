@@ -6,7 +6,9 @@ const dotenv = require("dotenv")
 const { Server } = require("http")
 const { connect } = require("http2")
 const connectDb = require("./config/connectDb")
-const swaggerUI = require("swagger-ui")
+// const swaggerUI = require('swagger-ui-express');
+// const swaggerJsDoc = require('swagger-jsdoc');
+// const swaggerDocs = swaggerJsDoc(swaggerOptions);
 //config dot env file 
 dotenv.config();
 
@@ -34,7 +36,7 @@ app.get("/", (req,res)=>{
     res.send("<h1>Hello...</h1>");
 })
 
-app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerjsDos));
+// app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerJsDoc));
 
 //listen Server
 app.listen(PORT, () => {
