@@ -30,7 +30,7 @@ app.use('/api/v1/transactions', require('./routes/transactionRoutes'))
 
 //port
 const PORT = 8080 || process.env.PORT
-app.get("/", (res,req)=>{
+app.get("/", (req,res)=>{
     res.send("<h1>Hello...</h1>");
 })
 
