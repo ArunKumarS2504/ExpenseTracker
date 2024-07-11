@@ -24,6 +24,7 @@
     "mongoose": "^7.4.1",
     "morgan": "^1.10.0",
     "node-sass": "^9.0.0",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "swagger-ui": "^5.17.14"
   }
 }

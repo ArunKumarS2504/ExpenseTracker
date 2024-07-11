@@ -6,7 +6,7 @@ const dotenv = require("dotenv")
 const { Server } = require("http")
 const { connect } = require("http2")
 const connectDb = require("./config/connectDb")
-
+const swaggerUI = require("swagger-ui")
 //config dot env file 
 dotenv.config();
 
@@ -33,6 +33,8 @@ const PORT = 8080 || process.env.PORT
 app.get("/", (req,res)=>{
     res.send("<h1>Hello...</h1>");
 })
+
+app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerjsDos));
 
 //listen Server
 app.listen(PORT, () => {
